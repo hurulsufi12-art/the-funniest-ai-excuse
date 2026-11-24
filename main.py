@@ -3,6 +3,10 @@
 Writes one line (126 chars) to /output/entry.txt: the funniest excuse
 an AI agent gives after failing a task, in the agent's own first-person
 voice. Python 3.13 stdlib only, deterministic, no network, no model calls.
+
+The line is a fixed string, not generated: the same input always yields
+the same byte-identical output, so the entry is reproducible in the
+sandbox (two runs, one CPU, no network) exactly as it runs locally.
 """
 from pathlib import Path
 
